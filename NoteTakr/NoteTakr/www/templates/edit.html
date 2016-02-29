@@ -1,0 +1,58 @@
+<ion-view view-title="Edit Note">
+	<ion-content>
+		<div class="list card">
+			<div class="item item-input">
+				<input type="text" placeholder="Name your note..." ng-model="note.title">				
+			</div>
+			<div class="item item-input">
+				<textarea rows="5" placeholder="Add some details..." ng-model="note.description"></textarea>
+			</div>
+		</div>
+		<div class="list card">
+
+			<div class="item"> 
+				<label class="item-input item-select">
+					<div class="input-label">
+						Month
+					</div>
+					<select ng-model="note.datemonth">
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>Septempber</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+					</select>
+				</label>
+
+				<div class="item item-input">
+					<p>Day &nbsp</p>
+					<input type="text" placeholder="Day" ng-model="note.dateday">
+				</div>
+
+				<div class="item item-input">
+					<p>Year &nbsp</p>
+					<input type="text" placeholder="Year" ng-model="note.dateyear">
+				</div>
+
+			</div>
+		</div>
+		<div class="list card">
+		<div class="list">
+		  <div class="item range range-positive">
+		    Priority
+		    <input type="range" name="volume" min="0" max="10" value="33" ng-model="note.priority">
+		    <i class="ion-fireball assertive-flame"></i>
+		  </div>
+		</div>
+		<div class="padding">
+			<button class="button button-block button-positive" ng-click="save()">Save</button>
+		</div>
+	</ion-content>
+</ion-view>
